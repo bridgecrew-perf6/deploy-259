@@ -7,7 +7,7 @@ services:
     networks:
       - scrumpy-backend
   backend:
-    build: .
+    image: ghcr.io/lp-scrumpy/backend:v0.1.0
     env_file:
       - .env
     ports:
@@ -16,7 +16,7 @@ services:
       - scrumpy-backend
       - scrumpy-frontend
   frontend:
-    build: .
+    image: ghcr.io/lp-scrumpy/frontend:v0.1.0
     env_file:
       - .env
     ports:
